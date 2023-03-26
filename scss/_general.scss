@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  @include basic-area;
+  margin-top: 80px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include basic-area;
+  display: inline-block;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}

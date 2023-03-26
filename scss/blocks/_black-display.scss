@@ -1,0 +1,173 @@
+.black-display {
+  background-color: $dark-primary;
+
+  & .header {
+    background-color: $dark-primary;
+  }
+
+  & .management-site {
+    background-color: $dark-primary;
+  }
+
+  & .header__logo-link {
+    background-image: url(../../img/dark-product-logo.svg);
+  }
+
+  & .header__item-link {
+    color: #ffffffff;
+  }
+
+  & .header__button {
+    color: #ffffffff;
+  }
+
+  & .header__burger::before,
+  & .header__burger::after,
+  & .header__burger-inner {
+    background-color: #ffffffff;
+  }
+
+  & .footer__logo {
+    background-image: url(../../img/dark-product-logo.svg);
+  }
+
+  & .footer__nav-title {
+    color: #ffffffff;
+  }
+
+  & .footer__item-link {
+    color: #ffffffff;
+  }
+
+  .footer__label {
+    color: #ffffffff;
+  }
+
+  .footer__slogan {
+    color: #ffffffff;
+  }
+
+  .intro-product__title {
+    color: #ffffffff;
+  }
+  
+  .enterprise {
+    background: $dark;
+  }
+
+  .enterprise__title {
+    color: #fff;
+  }
+
+  .intro-product__discription {
+    color: #ffffffff;
+  }
+
+  .product-specifically__title {
+    color: #ffffffff;
+  }
+
+  .product-specifically__titule {
+    color: #ffffffff;
+  }
+  .product-specifically__discription {
+    color: #ffffffff;
+  }
+
+  .management-site__span {
+    color: #ffffffff;
+  }
+
+  .management-site__title {
+    color: #ffffffff;
+  }
+  .management-site__accessory {
+    color: #ffffffff;
+  }
+
+  .management-site__pharagraph {
+    color: #ffffffff;
+  }
+
+  .management-site__alterationists {
+    color: #ffffffff;
+  }
+
+  .management-site__discrip {
+    color: #ffffffff;
+  }
+
+  .management-site__text {
+    color: #ffffffff;
+  }
+
+  .management-site__station  {
+    color: #ffffffff;
+  }
+
+  .quick__title {
+    color: #ffffffff;
+  }
+
+  .quick__discrip {
+    color: #ffffffff;
+  }
+
+  .quick__word {
+    background-color: #ffffffff;
+  }
+
+  .strategies__title {
+    color: #ffffffff;
+  }
+
+  .strategies__description {
+    color: #ffffffff;
+  }
+
+  .strategies__item-content {
+    background-color: #ffffffff;
+  }
+
+  .pricing__title {
+    color: #ffffffff;
+  }
+
+  .pricing__description {
+    color: #ffffffff;
+  }
+
+  .pricing__list-item {
+    background-color: #ffffffff;
+  }
+
+  .pricing__item-title {
+    color: #ffffffff;
+  }
+
+  .pricing__item-title {
+    color: #000;
+  }
+
+  .pricing__item-title--white {
+    color: #ffffffff;
+  }
+
+  .testimonial__title {
+    color: #ffffffff;
+  }
+
+  .testimonial__description {
+    color: #ffffffff;
+  }
+
+  .testimonial__list-item {
+    background-color: #ffffffff;
+  }
+
+  .effects__title,
+  .effects__item-title,
+  .effects__item-text {
+    color: #fff;
+  }
+}

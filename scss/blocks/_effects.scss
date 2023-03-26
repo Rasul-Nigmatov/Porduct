@@ -1,0 +1,125 @@
+.effects__container {
+  padding-top: 150px;
+}
+
+.effects__title {
+  @include font ($poppins, 34px, 700, 51px);
+  color: $dark;
+  margin-bottom: 56px;
+  width: 100%;
+  text-align: center;
+}
+
+.effects__img {
+  padding-top: 24px;
+}
+
+.effects__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.effects__list {
+  @include reset-list;
+  width: 543px;
+} 
+
+.effects__item {
+  margin-bottom: 32px;
+}
+
+.effects__item:last-child {
+  margin-bottom: 0;
+}
+
+.effects__item-content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 23px;
+}
+
+.effects__item-content::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin-right: 18px;
+}
+
+.effects__item--enter::before {
+  background-image: url('../../img/enter.png');
+}
+
+.effects__item--account::before {
+  background-image: url('../../img/account.png');
+}
+
+.effects__item--univer::before {
+  background-image: url('../../img/univer.png');
+}
+
+.effects__item-title {
+  @include font ($poppins, 24px, 600, 36px);
+  color: $dark;
+}
+
+.effects__item-text {
+  @include font ($poppins, 16px, 400, 28px);
+  color: $dark;
+}
+
+@media screen and (max-width: $tablet) {
+  .effects__content {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .effects__img {
+    padding-top: 0;
+    margin-bottom: 36px;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .effects__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .effects__content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .effects__title {
+    @include font ($poppins, 32px, 700, 48px);
+    margin-bottom: 33px;
+    width: 342px;
+  }
+
+  .effects__img {
+    width: 352px;
+    height: 288px;
+    margin-bottom: 32px;
+  }
+
+  .effects__list {
+    width: 339px;
+  }
+
+  .effects__item-content::before {
+    width: 53px;
+  }
+
+  .effects__item {
+    margin-bottom: 24px;
+  }
+
+  .effects__item-content {
+    margin-bottom: 16px;
+  }
+}

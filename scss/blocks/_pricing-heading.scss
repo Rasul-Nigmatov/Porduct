@@ -1,0 +1,9 @@
+.pricing-heading__container {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.pricing-heading__title {
+    color: $dark;
+    @include font($poppins, 24px, 600, 36px);
+}

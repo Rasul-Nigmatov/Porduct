@@ -1,0 +1,27 @@
+@mixin reset-list {
+  @include basic-area;
+  list-style: none;
+}
+
+@mixin basic-area {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin basic-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin font($font, $size, $weight, $height) {
+  font-family: $font;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+}

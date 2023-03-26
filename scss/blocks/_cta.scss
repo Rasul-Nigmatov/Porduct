@@ -1,0 +1,66 @@
+.cta__container {
+    max-width: 1150px;
+    padding: 157px 20px 150px;
+}
+
+.cta__content {
+    @include basic-img;
+    max-width: 968px;
+    margin: 0 auto;
+    padding: 49px 51px 56px;
+    background-color: $green;
+    border-radius: 32px;
+    background-size: contain;
+    background-position: right center;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min--moz-device-pixel-ratio: 2),
+        only screen and (-o-min-device-pixel-ratio: 2/1),
+        only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and (min-resolution: 2dppx) {
+        background-image: url("../../img/cta-bg2@.png");
+    }
+
+    background-image: url(../../img/cta-bg.png);
+}
+
+.cta__slogan {
+    @include font($poppins, 32px, 600, 48px);
+    @include basic-area;
+    max-width: 500px;
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+.cta__button {
+    @include font($poppins, 20px, 600, 30px);
+    display: inline-block;
+    padding: 13px 35px 7px 33px;
+    border: none;
+    border-radius: 8px;
+    background-color: #fff;
+    color: $green;
+
+    &:hover {
+        box-shadow: 0 0 10px #f4f4f4;
+    }
+}
+
+@media only screen and (max-width: $mobile) {
+    .cta__container {
+        width: unset;
+        padding: 100px 20px;
+    }
+
+    .cta__content {
+        padding-bottom: 373px;
+        background-size: 351px 331px;
+        background-position: bottom center;
+        text-align: center;
+    }
+
+    .cta__slogan {
+        margin: 0 auto 50px;
+    }
+}

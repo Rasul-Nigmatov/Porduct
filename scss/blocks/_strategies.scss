@@ -1,0 +1,134 @@
+.strategies__container {
+    padding-bottom: 80px;
+    color: $dark;
+}
+
+.strategies__title {
+    @include basic-area;
+    @include font($poppins, 34px, 700, 51px);
+}
+
+.strategies__description {
+    @include basic-area;
+    @include font($poppins, 16px, 500, 26px);
+    margin: 8px 0 33px;
+}
+
+.strategies__list {
+    @include basic-area;
+    @include reset-list;
+    @include flex;
+    justify-content: space-between;
+}
+
+.strategies__list-item {
+    max-width: 348px;
+    border: 1px solid #dedede;
+    border-radius: 8px;
+    overflow: hidden;
+
+    &:nth-child(even) {
+        .strategies__item-text {
+            color: $green;
+        }
+    }
+}
+
+.strategies__item-content {
+    padding: 24px 30px 40px 24px;
+}
+
+.strategies__item-description {
+    @include basic-area;
+    @include font($poppins, 16px, 400, 28px);
+    color: $dark;
+    margin-bottom: 12px;
+}
+
+.strategies__item-name {
+    font-weight: 700;
+
+    &::after {
+        content: "";
+        height: 16px;
+        width: 2px;
+        display: inline-block;
+        margin: 0 8px;
+        background-color: $dark;
+    }
+}
+
+.strategies__item-text {
+    @include basic-area;
+    @include font($poppins, 24px, 700, 40px);
+}
+
+.strategies__carusel {
+    @include flex;
+    width: 68px;
+    margin: 0 auto;
+    margin-top: 64px;
+    justify-content: space-between;
+}
+
+.strategies__carusel-roll {
+    width: 16px;
+    height: 16px;
+    background-color: #efefef;
+    border-radius: 50%;
+
+    &:nth-child(even) {
+        background-color: $green;
+    }
+}
+
+@media only screen and (max-width: $tablet) {
+    .strategies__container {
+        padding-bottom: 0;
+        text-align: center;
+    }
+
+    .strategies__list {
+        max-width: 728px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .strategies__list-item {
+        margin: 0 32px 16px 0;
+
+        &:last-child {
+            margin-bottom: 0;
+            margin-right: 0;
+        }
+
+        &:nth-child(even) {
+            margin-right: 0;
+        }
+    }
+
+    .strategies__carusel {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: $mobile) {
+    .strategies__container {
+        text-align: center;
+    }
+
+    .strategies__list {
+        max-width: 348px;
+    }
+
+    .strategies__list-item {
+        margin-right: 0;
+        border: none;
+    }
+
+    .strategies__item-content {
+        padding: 24px 54px 37px 0;
+    }
+}

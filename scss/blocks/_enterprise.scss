@@ -1,0 +1,59 @@
+.enterprise {
+  background: linear-gradient(180deg, #F7F7F7 0%, rgba(247, 247, 247, 0) 100%);
+}
+
+.enterprise__container {
+  padding-top: 53px;
+  padding-bottom: 51px;
+  text-align: center;
+}
+
+.enterprise__title {
+  color: $dark;
+  @include font ($poppins, 24px, 600, 36px);
+  margin-bottom: 16px;
+}
+
+.enterprise__text1 {
+  color: $dark;
+  @include font ($poppins, 34px, 700, 51px);
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.enterprise__text2 {
+  color: $dark;
+  @include font ($poppins, 18px, 400, 27px);
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+.enterprise__button {
+  @include font ($montserrat, 18px, 600, 22px);
+  color: #fff;
+  padding: 10px 17px;
+  background-color: $green;
+  border: 1px solid transparent;
+  border-radius: 8px;
+
+  &:hover {
+    box-shadow: 0px 0px 10px gray;
+    color: rgba(255, 255, 255, 0.76);
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .enterprise__container {
+    padding-top: 47px;
+    padding-bottom: 46px;
+  }
+
+  .enterprise__title {
+    margin-bottom: 24px;
+  }
+
+  .enterprise__text1 {
+    @include font ($poppins, 32px, 700, 48px);
+    margin-bottom: 25px;
+  }
+}

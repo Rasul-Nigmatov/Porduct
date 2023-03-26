@@ -1,0 +1,68 @@
+.frequent {
+
+}
+
+.frequent__container {
+  padding-top: 150px;
+}
+
+.frequent__title {
+  @include font ($poppins, 34px, 700, 51px);
+  color: $dark;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.frequent__text {
+  @include font ($poppins, 18px, 400, 27px);
+  color: $dark;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.frequent__list {
+  @include reset-list;
+  width: 920px;
+  margin: 0 auto;
+}
+
+
+.frequent__item-btn {
+  @include font ($poppins, 18px, 500, 27px);
+  color: $dark;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #e7e7e7;
+  text-align: left;
+  padding: 16px 0 22px;
+}
+
+.frequent__item-btn::before {
+  content: "";
+  background-image: url('../img/plus_circle.svg');
+  width: 24px;
+  height: 24px;
+  display: block;
+  transform: translateY(-50%);
+}
+
+.frequent__item-text {
+  @include font ($poppins, 18px, 500, 27px);
+  color: $dark;
+}
+
+@media screen and (max-width: $tablet) {
+  .frequent__list {
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .frequent__list {
+    width: 355px;
+  }
+}

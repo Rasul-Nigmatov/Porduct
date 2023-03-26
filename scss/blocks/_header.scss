@@ -1,0 +1,188 @@
+@keyframes header-opening {
+  0% {
+    transform: translateX(100%) scale(0) rotate(180deg);
+  }
+
+  100% {
+    transform: translateX(0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes header-closing {
+  0% {
+    transform: translateX(0) scale(1) rotate(0deg);
+  }
+
+  100% {
+    transform: translateX(100%) scale(0) rotate(180deg);
+  }
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  background-color: #ffffff;
+  filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.25));
+}
+
+.header__container {
+  @include flex;
+  padding: 19px 20px;
+  justify-content: space-between;
+}
+
+.header__navbar {
+  transform-origin: right top;
+}
+
+.header__logo-link {
+  @include basic-img;
+  width: 176px;
+  height: 36px;
+  background-image: url(../../img/product-logo.svg);
+  background-size: contain;
+}
+
+.header__button {
+  margin-right: 24px;
+}
+
+.header__changer {
+  @include basic-area;
+  @include flex;
+  height: 32px;
+  width: 32px;
+  background-color: $changer-color;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .5s linear all;
+
+  &:hover {
+    box-shadow: 0 0 10px gray;
+  }
+}
+
+.header__burger {
+  @include basic-area;
+  display: none;
+  width: 28px;
+  height: 31px;
+  position: relative;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::before,
+  &::after,
+  &-inner {
+    width: 21px;
+    height: 3px;
+    display: block;
+    border-radius: 25%;
+    background-color: $black;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+  }
+
+  &--opened {
+    align-items: center;
+  }
+
+  &--opened &-inner {
+    display: none;
+  }
+
+  &--opened::before,
+  &--opened::after {
+    width: 21px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
+
+  &--opened::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &--opened::before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+@media only screen and (max-width: $tablet) {
+  .header__navbar-item,
+  .header__button,
+  .header__navbar-list {
+    margin-right: 14px;
+  }
+}
+
+@media only screen and (max-width: $mobile) {
+  .header__navbar {
+    display: none;
+    animation: header-opening .5s linear;
+
+    &--opening {
+      width: 100%;
+      height: calc(100vh - 80px);
+      padding: 30px;
+      display: grid;
+      grid-template-columns: 1fr 100px 1fr;
+      grid-template-rows: 250px 50px;
+      grid-template-areas: "list list list""button-1 button-2 button-3";
+      grid-row-gap: 32px;
+      justify-items: center;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: $black;
+    }
+
+    &--closing {
+      animation: header-closing .5s linear;
+    }
+
+  }
+
+  .header__navbar-list {
+    @include basic-area;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-area: list;
+  }
+
+  .header__item-link {
+    font-size: 46px;
+    color: #ffffff;
+  }
+
+  .header__button {
+    margin: 0;
+  }
+
+  .header__login {
+    grid-area: button-1;
+    color: #ffffff;
+  }
+
+  .header__changer {
+    grid-area: button-2;
+  }
+
+  .header__signup {
+    grid-area: button-3;
+  }
+
+  .header__burger {
+    @include flex;
+    flex-wrap: wrap;
+  }
+}
